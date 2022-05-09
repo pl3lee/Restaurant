@@ -1,2 +1,4 @@
 import './style.css';
-console.log("alert");
+import loadGeneral from './general';
+
+loadGeneral();

@@ -42,6 +42,7 @@ ul {
 .header-container > img {
     width: 150px;
     object-fit: cover;
+    content:url('./images/pingu-icon.png');
 }
 div.nav {
     display: flex;
