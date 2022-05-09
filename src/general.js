@@ -1,4 +1,17 @@
 import loadHome from './home.js';
+import loadMenu from './menu.js';
+import loadContact from './contact.js';
+
+
+const clearClicked = function() {
+    let navHome = document.querySelector('#home.nav-button');
+    let navMenu = document.querySelector('#menu.nav-button');
+    let navContact = document.querySelector('#contact.nav-button');
+    navHome.classList.remove('clicked');
+    navMenu.classList.remove('clicked');
+    navContact.classList.remove('clicked');
+}
+
 export default function() {
     let contentDiv = document.querySelector("div#content");
     contentDiv.replaceChildren();
@@ -53,6 +66,21 @@ export default function() {
     contentDiv.appendChild(mainDiv);
 
     loadHome();
-
-    divHome.addEventListener('click', () => loadHome());
+    let navHome = document.querySelector('#home.nav-button');
+    navHome.classList.add('clicked');
+    divHome.addEventListener('click', (event) => {
+        loadHome();
+        clearClicked();
+        event.target.classList.add('clicked');
+    });
+    divMenu.addEventListener('click', (event) => {
+        loadMenu();
+        clearClicked();
+        event.target.classList.add('clicked');
+    });
+    divContact.addEventListener('click', (event) => {
+        loadContact();
+        clearClicked();
+        event.target.classList.add('clicked');
+    });
 }

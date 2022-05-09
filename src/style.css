@@ -42,7 +42,7 @@ ul {
 .header-container > img {
     width: 150px;
     object-fit: cover;
-    content:url('./images/pingu-icon.png');
+    content: url('./images/pingu-icon.png');
 }
 div.nav {
     display: flex;
@@ -59,17 +59,19 @@ div.nav > ul {
     
 }
 
-div.nav > ul > li > div {
+.nav-button {
     color: white;
     font-size: x-large;
     font-weight: bolder;
 }
+
 
 div.main {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     margin-top: 2vh;
+    min-width: 500px;
 }
 
 div.main-content {
@@ -80,6 +82,7 @@ div.main-content {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    min-width: 500px;
 }
 
 div.content-section {
@@ -146,3 +149,8 @@ div#hours.content-section-text > ul {
     justify-content: center;
     align-items: center;
 }
+
+.clicked.nav-button {
+    font-size: xx-large;
+}
+
