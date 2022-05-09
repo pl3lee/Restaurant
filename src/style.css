@@ -108,3 +108,25 @@ div#hours.content-section-text > ul {
     gap: 10px;
     justify-content: start;
 }
+
+#main-dish.content-section-text, #desserts.content-section-text {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
+    justify-content: center;
+    gap: 10px;
+}
+
+.dish {
+    border: solid 5px #f0f9ff;
+    border-radius: 10px;
+    background: #f0f9ff;
+    padding: 5px;
+    /* width: 200px; */
+}
+
+.dish-image {
+    width: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
